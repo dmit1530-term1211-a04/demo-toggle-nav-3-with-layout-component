@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Navigation: Off-Canvas Menu</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <!-- because we're the sliding the menu off the canvas to left and bringing it back, it going to be placed a the top -->
+        <nav class="sliding-nav">
+            <ul class="menu-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex">
+            <h1><a href="index.html">RWD</a></h1>
+            <div class="toggle-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <section>
+        <p>Responsive Web Design</p>
+        <h2>Toggle Nav</h2>
+        
+        <!-- gallery section -->
+        <div class="gallery">
+            <div class="thumbail">
+                <span>New</span>
+                <img src="img/design-project-1.jpg" alt="web design project"/>
+            </div>
+            <div class="thumbail">
+                <img src="img/design-project-2.jpg" alt="web design project"/>
+            </div>
+            <div class="thumbail">
+                <img src="img/design-project-3.jpg" alt="web design project"/>
+            </div>
+            <div class="thumbail">
+                <img src="img/design-project-4.jpg" alt="web design project"/>
+            </div>
+        </div>
+        
+    </section>
+    
+    
+    
+    <!-- the link to the js file goes inside the body tag but at the very bottom -->
+    <script src="js/main.js"></script>
+</body>
+</html>

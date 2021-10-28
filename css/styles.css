@@ -1,0 +1,199 @@
+body {
+    background-color: #192f5e;
+    font-family: sans-serif;
+}
+
+/* *************** header & nav ************** */
+
+a {
+    display: block;
+    color: #3f3f3f;
+    text-decoration: none;
+}
+
+header {
+    background-color: #fff;
+    padding: 2%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** toggle icon **/
+.toggle-icon span {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    border-radius: 100px;
+    background-color: #3f3f3f;
+    display: block;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+/** hide the first span tag **/
+.show-nav .toggle-icon span:first-child {
+    display: none;
+}
+
+.show-nav .toggle-icon span:nth-child(2){
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.show-nav .toggle-icon span:last-child {
+    transform: rotate(-45deg);
+}
+
+
+
+
+header {
+    position: relative;
+}
+
+/** default styling - style the menu before you move it **/
+/** use the class appended the nav the position **/
+.sliding-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/** use the element for styling purposes **/
+nav {
+    background-color: #fff;
+    min-width: 18.75rem; /**300px*/
+    height: 100vh; /** forces the nav to span all the way to the bottom browser viewport **/
+}
+
+ul.menu-links {
+    margin-top: 3.125rem; /* 50px **/
+}
+
+ul.menu-links li {
+    line-height: 65px;
+    text-align: center;
+}
+
+/* ul.menu-links li:hover {
+    background-color: navy;
+} */
+ul.menu a {
+    transition: all 0.5s ease-in-out;
+}
+ul.menu-links a:hover {
+    background-color: navy;
+    color: white;
+}
+
+/** hide the menu **/
+/** find the width of element (nav) move it far to the left to be off the canvas (outside the viewport). So for example, if your menu is sized at 300px, then you move it off the canvas by that much. **/
+
+.sliding-nav {
+    left: -18.75rem; 
+    transition: left 1s ease-in-out;
+}
+
+/** 
+that's our default state is done, we  want to add an active state class (js) to bring back your menu **/
+
+/** set the left property element to zero, positioning it back on the screen **/
+
+.show-nav .sliding-nav {
+    top: 0;
+    left: 0;
+    transition: left 1s ease-in-out;
+}
+
+
+/* ************ section ************ */
+section {
+    padding: 3.125rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section p {
+    color: #d5e294;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #d5e294;
+    font-size: 1.777rem;
+    width: 35%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #fff;
+    font-size: 3.157rem;
+}
+
+
+/** gallery **/
+.gallery {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-top: 3.125rem;
+}
+
+.thumbail {
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+.thumbail img {
+    margin-bottom: 1rem;
+}
+
+.gallery span {
+    background-color: #87a6ab;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: absolute;
+    top: -20px;
+    right: -10px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .toggle-icon {
+        display: none;
+    }
+
+    /* reset the positioning and height of the nav **/
+    .sliding-nav {
+        position: static;
+        height: auto; /** height: initial **/  
+    }
+
+    ul.menu-links {
+        margin-top: 0;
+    }
+
+    ul.menu-links,
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    /** use flex order to place the menu on the right **/
+    .flex {
+        order: -1;
+    }
+
+    ul.menu-links li {
+        padding: 0 5px;
+        margin: 0 3px;
+    }
+
+    .menu-links li:hover {
+        background-color: #dde7e9;
+        border-radius: 8px;
+    }
+}
