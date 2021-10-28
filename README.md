@@ -1,2 +1,3 @@
-# demo-toggle-nav-3-with-layout-component
+# [demo] Toggle Nav v.3 with Layout Component
+
 off canvas menu and flexible layout with position
